@@ -14,7 +14,7 @@
 
 This is a sample sequence of location logging:
 
-![test image](https://cloud.githubusercontent.com/assets/420433/4607553/dadbd2fe-5253-11e4-8716-be2f648821c4.jpg)
+![screenshot1](https://cloud.githubusercontent.com/assets/420433/4607830/24fe4b4c-5262-11e4-8456-85fb1473a830.png)
 
 ## Files
 
