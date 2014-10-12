@@ -1,21 +1,34 @@
-**Daux.io** is an documentation generator that uses a simple folder structure and Markdown files to create custom documentation on the fly. It helps you create great looking documentation in a developer friendly way.
+## LocationSender Class
+```
+LocationSender(Context context)
+```
+Class which has the bluetooth connectivity and pairing information.
+
+```
+LocationSender.listen()
+```
+
+Keep listening until a socket is connected.
+
+After this method is called, you can make a connection by pushing "Connect" button on logging app.
+Note that when this method is called, the bluetooth adapter should be discoverable by logging app to make a connection.
+
+```
+sendLocation(double lat, double lng, int level)
+```
+
+Send estimated location with timestamp to the connected logging app.
+
+The coordinate of the location should be presented in WGS-84 (World Geodetic System) and it also should contain the information of floor level.
+This method should be called whenever you have a new positioning result, while the bluetooth connection is maintained.
+
+**Dummy Localizer ** is an random location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
 
 ## Features
 
-* 100% Mobile Responsive
-* Supports GitHub Flavored Markdown
-* Auto created homepage/landing page
-* Auto Syntax Highlighting
-* Auto Generated Navigation
-* 4 Built-In Themes or roll your own
-* Functional, Flat Design Style
-* Shareable/Linkable SEO Friendly URLs
-* Built On Bootstrap
-* No Build Step
-* Git/SVN Friendly
-* Supports Google Analytics and Piwik Analytics
-* Optional code float layout
-* Static Output Generation
+* 1:1 Bluetooh Data Communication
+* Random Coordinates Output Generation
+* Sending the Output to Logging Application
 
 ## Demos
 
@@ -62,21 +75,6 @@ You must use underscores instead of spaces. Here are some example file names and
 
 * File Name With Space.md = FAIL
 
-## Sorting
-
-To sort your files and folders in a specific way, you can prefix them with a number and underscore, e.g. `/docs/01_Hello_World.md` and `/docs/05_Features.md` This will list *Hello World* before *Features*, overriding the default alpha-numeric sorting. The numbers will be stripped out of the navigation and urls. For the file `6 Ways to Get Rich`, you can use `/docs/_6_Ways_to_Get_Rich.md`
-
-## Landing page
-
-If you want to create a beautiful landing page for your project, simply create a `index.md` file in the root of the `/docs` folder. This file will then be used to create a landing page. You can also add a tagline and image to this page using the config file like this:
-
-```json
-{
-	"title": "Daux.io",
-	"tagline": "The Easiest Way To Document Your Project",
-	"image": "<base_url>img/app.png"
-}
-```
 
 Note: The image can be a local or remote image. Use the convention `<base_url>` to refer to the root directory of the Daux instance.
 
@@ -220,18 +218,6 @@ Set custom files and entire folders to ignore within your `/docs` folder. For fi
 ```
 
 ###Breadcrumb titles
-Daux.io provides the option to present page titles as breadcrumb navigation. You can *optionally* specify the separator used for breadcrumbs.
-
-```json
-{
-		"breadcrumbs": true,
-		"breadcrumb_separator" : " > "
-}
-```
-
-###Date Modified
-By default, daux.io will display the last modified time as reported by the system underneath the title for each document. To disable this, change the option in your config.json to false.
-
 ```json
 {
 	"date_modified": false
@@ -355,4 +341,4 @@ If you have a global mime map entry for `.less` files set for the server, you wi
 
 ## Support
 
-If you need help using Daux.io, or have found a bug, please create an issue on the <a href="https://github.com/justinwalsh/daux.io/issues" target="_blank">GitHub repo</a>.
+If you need help using Daux.io, or have found a bug, please create an issue on the <a href="file:///Users/lang/git/daux.io/static/Getting_Started.html" target="_blank">GitHub repo</a>.
