@@ -1,4 +1,4 @@
-**Dummy Localizer ** is a zero location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
+**Dummy Localizer ** is a dummy location generator just for test and customise your own positioning application. It helps you attach your positioning system with IPIN'14 logging application.
 
 ## Features
 
@@ -81,6 +81,12 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 1. When `listen` button clicked, make bluetooh discoverable and listen
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
 3. 2 process must be done after connect with logging application
+
+## Logging Application Output
+
+* Output files are located in `/sdcard/ipin2014/` folder and two text files will be create and form like this: 
+* `<id>_keypoint.txt`: < id >, timestamp, keypoint numbering(eg, 0,1,2,3,...)
+* `<id>_keypoint.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, level
 
 ## Support
 
