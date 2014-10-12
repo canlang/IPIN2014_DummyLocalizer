@@ -1,11 +1,14 @@
-**Dummy Localizer ** is an random location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
+**Dummy Localizer ** is a zero location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
 
 ## Features
 
 * Contain IPIN'14 Competition Common Library : `libs/ipin2014_common.jar`
 * 1:1 Bluetooh Data Communication
-* Random Coordinates Output Generation
+* Zero Coordinates Output Generation
 * Sending the Output to Logging Application
+
+## Logging Application Workflow
+![workflow](https://cloud.githubusercontent.com/assets/420433/4607778/6fb7eb8c-525f-11e4-9b2f-5ad41e4068ac.png)
 
 ## Demos
 
@@ -13,6 +16,11 @@ This is a sample sequence of location logging:
 
 ![test image](https://cloud.githubusercontent.com/assets/420433/4607553/dadbd2fe-5253-11e4-8716-be2f648821c4.jpg)
 
+## Files
+
+* Logging App. 		: `IPIN2014_Logger.apk`
+* Dummy App. 		: `bin/IPIN2014_DummyLocalizer.apk`
+* IPIN Common Lib.	: `libs/ipin2014_common.jar`
 
 ## Download
 
@@ -73,7 +81,6 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 1. When `listen` button clicked, make bluetooh discoverable and listen
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
 3. 2 process must be done after connect with logging application
-
 
 
 ## Support
