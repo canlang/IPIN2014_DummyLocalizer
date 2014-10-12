@@ -1,7 +1,30 @@
-## LocationSender Class
+**Dummy Localizer ** is an random location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
+
+## Features
+
+* Contain IPIN'14 Competition Common Library : `libs/ipin2014_common.jar`
+* 1:1 Bluetooh Data Communication
+* Random Coordinates Output Generation
+* Sending the Output to Logging Application
+
+## Demos
+
+This is a sample sequence of location logging:
+
+![test image](https://cloud.githubusercontent.com/assets/420433/4607553/dadbd2fe-5253-11e4-8716-be2f648821c4.jpg)
+
+
+## Download
+
+Download this repository. Copy the apk file to an Android that can run 4.x or greater.
+
+## IPIN'14 Competition Common Library
+### LocationSender Class
+
 ```java
 LocationSender(Context context)
 ```
+
 Class which has the bluetooth connectivity and pairing information.
 
 ```java
@@ -22,322 +45,36 @@ Send estimated location with timestamp to the connected logging app.
 The coordinate of the location should be presented in WGS-84 (World Geodetic System) and it also should contain the information of floor level.
 This method should be called whenever you have a new positioning result, while the bluetooth connection is maintained.
 
-**Dummy Localizer ** is an random location generator just for testing and help for customise your own positioning application. It helps you attach your positioning system with our logging application.
+## Sample Code Review
 
-## Features
-
-* 1:1 Bluetooh Data Communication
-* Random Coordinates Output Generation
-* Sending the Output to Logging Application
-
-## Demos
-
-This is a list of sites using Daux.io:
-
-* [Daux.io](http://daux.io)
-* [Gltn - An open-source word processor webapp](http://felkerdigitalmedia.com/gltn/)
-* [Invade & Annex 3 - An Arma 3 Co-operative Mission](http://ia3.ahoyworld.co.uk/)
-* [Munee: Standalone PHP 5.3 Asset Optimisation & Manipulation](http://mun.ee)
-* [ICADMIN: An admin panel powered by CodeIgniter.](http://istocode.com/shared/ic-admin/)
-* [Daux.io in Chinese - Demonstrates muti-language installations](http://daux.emx2.co.uk/)
-* [TemplateLib - Simple PHP templating library](http://templatelib.com)
-* [TrackJs](http://docs.trackjs.com)
-* [Sugoi](http://doc.sugoi.ventrux.com/)
-
-Do you use Daux.io? Send me a pull request or open an [issue](https://github.com/justinwalsh/daux.io/issues) and I will add you to the list.
-
-## Download
-
-Download this repository , and run at Android device. Copy the files to a web server that can run PHP 5.3 or greater. You can also run the documentation locally using Grunt.js, which is covered at the end of this readme.
-
-## Folders
-
-By default, the generator will look for folders in the `docs` folder. Add your folders inside the `docs` folder. This project contains some example folders and files to get you started.
-
-You can nest folders any number of levels to get the exact structure you want. The folder structure will be converted to the nested navigation.
-
-If you'd prefer to keep your docs somewhere else (like outside of the daux.io root directory) you can specify your docs path in the `global.json` file.
-
-## Files
-
-The generator will look for Markdown files (`*.md` and `*.markdown`) inside the `docs` folder and any of the subfolders within `docs`. Additional extensions can be added by editing `global.json`
-
-You must use underscores instead of spaces. Here are some example file names and what they will be converted to:
-
-**Good:**
-
-* 01_Getting_Started.md = Getting Started
-* API_Calls.md = API Calls
-* 200_Something_Else-Cool.md = Something Else-Cool
-* _5_Ways_to_Be_Happy.md = 5 Ways To Be Happy
-
-**Bad:**
-
-* File Name With Space.md = FAIL
-
-
-Note: The image can be a local or remote image. Use the convention `<base_url>` to refer to the root directory of the Daux instance.
-
-## Section landing page
-
-If you are interested in having a landing page for a subsection of your docs, all you need to do is add an `index.md` file to the folder. For example, `/docs/01_Examples` has a landing page for that section since there exists a `/docs/01_Examples/index.md` file. If you wish to have an index page for a section without a landing page format, use the name `_index.md`
-
-## Configuration
-
-To customize the look and feel of your documentation, you can create a `config.json` file in the of the `/docs` folder. The `config.json` file is a simple JSON object that you can use to change some of the basic settings of the documentation.
-
-###Title:
-Change the title bar in the docs
-
-```json
-{
-	"title": "Daux.io"
-}
-```
-
-###Themes:
-We have 4 built-in Bootstrap themes. To use one of the themes, just set the `theme` option to one of the following:
-
-* blue
-* green
-* navy
-* red
-
-```json
-{
-	"theme": "blue"
-}
-```
-
-###Custom Theme:
-To use a custom theme, just copy over the theme folder as well as the `.thm` file for that theme into the `themes` directory and set its value in the `theme` param in config.json
-
-```json
-{
-	"theme": "new-theme",
-}
-```
-
-###Code Floating:
-By default your code blocks will be floated to a column on the right side of your content. To disable this feature, set the `float` property to `false`.
-
-```json
-{
-	"float": false
-}
-```
-
-###Toggling Code Blocks
-Some users might wish to hide the code blocks & view just the documentation. By setting the `toggle_code` property to `true`, you can offer a toggle button on the page.
-
-```json
-{
-	"toggle_code": true
-}
-```
-
-
-###GitHub Repo:
-Add a 'Fork me on GitHub' ribbon.
-
-```json
-{
-	"repo": "justinwalsh/daux.io"
-}
-```
-
-###Twitter:
-Include twitter follow buttons in the sidebar.
-
-```json
-{
-	"twitter": ["justin_walsh", "todaymade"]
-}
-```
-
-###Links:
-Include custom links in the sidebar.
-
-```json
-{
-	"links": {
-		"GitHub Repo": "https://github.com/justinwalsh/daux.io",
-		"Help/Support/Bugs": "https://github.com/justinwalsh/daux.io/issues",
-		"Made by Todaymade": "http://todaymade.com"
-	}
-}
-```
-
-###File editor:
-![File editor](https://f.cloud.github.com/assets/1788727/1954191/44358884-81d1-11e3-859d-254b9fb81808.png)
-
-Enable front-end Markdown editor. _Disabled by default_.
-
-```json
-{
-	"file_editor": true
-}
-```
-
-###Google Analytics:
-This will embed the google analytics tracking code.
-
-```json
-{
-	"google_analytics": "UA-XXXXXXXXX-XX"
-}
-```
-
-###Piwik Analytics:
-This will embed the piwik tracking code.
-
-```json
-{
-	"piwik_analytics": "my-url-for-piwik.com"
-}
-```
-
-You can Also give a specific Piwik ID as well.
-
-```json
-{
-	"piwik_analytics_id": "43"
-}
-```
-
-###Ignore:
-Set custom files and entire folders to ignore within your `/docs` folder. For files make sure to include the file extension in the name. For both files and folders, names are case-sensitive.
-
-```json
-	{
-		"ignore": {
-			"files": ["Work_In_Progress.md"],
-			"folders": ["99_Not_Ready"]
+```java
+private View.OnClickListener mBtnListener = new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			switch ( v.getId() ) {
+			case R.id.btn_listen:
+				Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+				discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+				startActivity(discoverableIntent);
+				
+				mSender.listen();
+				
+				break;
+			case R.id.btn_sendLocation:
+				mSender.sendLocation(.0, .0, 0);
+				break;
+			}
 		}
-	}
+	};
 ```
+** comments: **
 
-###Breadcrumb titles
-```json
-{
-	"date_modified": false
-}
-```
+1. When `listen` button clicked, make bluetooh discoverable and listen
+2. When `send` button clicked, send the location (lat, lng, level) to logging application
+3. 2 process must be done after connect with logging application
 
-###Timezone
-If your server does not have a default timezone set in php.ini, it may return errors when it tries to generate the last modified date/time for docs. To fix these errors, specify a timezone in your config file. Valid options are available in the [PHP Manual](http://php.net/manual/en/timezones.php).
 
-```json
-{
-        "timezone": "America/Los_Angeles"
-}
-```
-
-###Multi-language
-Enables multi-language support which needs seperate directories for each language in `docs/` folder.
-
-```json
-{
-        "languages": { "en": "English", "de": "German" }
-}
-```
-
-Directory structure:
-```
-├── docs/
-│   ├── index.md
-│   ├── en
-│   │   ├── 00_Getting_Started.md
-│   │   ├── 01_Examples
-│   │   │   ├── 01_GitHub_Flavored_Markdown.md
-│   │   │   ├── 05_Code_Highlighting.md
-│   │   ├── 05_More_Examples
-│   │   │   ├── Hello_World.md
-│   │   │   ├── 05_Code_Highlighting.md
-│   ├── de
-│   │   ├── 00_Getting_Started.md
-│   │   ├── 01_Examples
-│   │   │   ├── 01_GitHub_Flavored_Markdown.md
-│   │   │   ├── 05_Code_Highlighting.md
-│   │   ├── 05_More_Examples
-│   │   │   ├── Hello_World.md
-│   │   │   ├── 05_Code_Highlighting.md
-```
-
-## Running Remotely
-
-Copy the files from the repo to a web server that can run PHP 5.3 or greater.
-
-## Running Locally
-
-There are several ways to run the docs locally. You can use something like <a href="http://www.mamp.info/en/index.html" target="_blank">MAMP</a> or <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a>. If you are like me and use alot of Node.js and <a href="http://gruntjs.com/" target="_blank">Grunt.js</a>, then you can use the optional grunt command I have packaged with the project which will start a PHP web server for you in the project folder.
-
-The Grunt.js task uses the built in web server in PHP 5.4 to host the docs on your local machine. This is really only intended be used when you are writing/updating a ton of docs and want to preview the changes locally.
-
-**To use the optional Grunt command you will need:**
-
-* Node.js
-* npm
-* Grunt.js
-* PHP 5.4 or greater (This is because of the built-in web server packaged in 5.4)
-
-This project contains a package.json file, so once you have the requirements installed, you can simply run a `npm install` and then `grunt` in the projects folder to start the local web server. By default the server will run at: <a href="http://localhost:8085" target="_blank">http://localhost:8085</a>
-
-## Generating a set of static files
-
-These can be uploaded to a static site hosting service such as pages.github.com
-
-Generating a complete set of pages, with navigation
-
-```bash
-php generate.php [global.json Relative Location] [Output Directory Relative Direction]
-```
-
-## Running on IIS
-
-If you have set up a local or remote IIS web site, you may need a `web.config` with:
-
-* A rewrite configuration, for handling clean urls.
-* A mime type handler for less files, if using a custom theme.
-
-### Clean URLs
-
-The `web.config` needs an entry for `<rewrite>` under `<system.webServer>`:
-
-```xml
-<configuration>
-	<system.webServer>
-		<rewrite>
-			<rules>
-				<rule name="Main Rule" stopProcessing="true">
-					<match url=".*" />
-					<conditions logicalGrouping="MatchAll">
-						<add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
-						<add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
-					</conditions>
-					<action type="Rewrite" url="index.php" appendQueryString="false" />
-				</rule>
-			</rules>
-		</rewrite>
-	</system.webServer>
-</configuration>
-```
-
-To use clean URLs on IIS 6, you will need to use a custom URL rewrite module, such as [URL Rewriter](http://urlrewriter.net/).
-
-### Less Mime Type
-
-The `web.config` needs a new `<mimeMap>` entry, under `<staticContent>` in `<system.webServer>`:
-
-```xml
-<staticContent>
-	<mimeMap fileExtension=".less" mimeType="text/css" />
-</staticContent>
-```
-
-You will only need the mime map entry if you are using a custom theme and receive 404s for `.less` files.
-
-If you have a global mime map entry for `.less` files set for the server, you will receive an internal server (500) error for having duplicate mime map entries.
 
 ## Support
 
