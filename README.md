@@ -82,7 +82,6 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
 3. 2 process must be done after connect with logging application
 
-
 ## Support
 
-If you need help using Daux.io, or have found a bug, please create an issue on the <a href="file:///Users/lang/git/daux.io/static/Getting_Started.html" target="_blank">GitHub repo</a>.
+If you need help using **Dummy Localizer**, or have found a bug, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
