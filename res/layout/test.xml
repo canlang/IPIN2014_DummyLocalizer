@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<Button 
+	    android:id="@+id/btn_listen"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/btn_listen" />
+
+	
+	<Button 
+	    android:id="@+id/btn_sendLocation"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/btn_sendLocation" />
+	
+			    
+    <TextView
+        android:id="@+id/latitute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/longtitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	 />
+	
+</LinearLayout>

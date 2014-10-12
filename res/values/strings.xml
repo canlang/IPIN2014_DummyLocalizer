@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">IPIN2014 Dummy App</string>
+    
+    <string name="btn_listen">listen</string>
+    <string name="btn_sendLocation">send location</string>
+</resources>
