@@ -1,10 +1,10 @@
 ## LocationSender Class
-```
+```java
 LocationSender(Context context)
 ```
 Class which has the bluetooth connectivity and pairing information.
 
-```
+```java
 LocationSender.listen()
 ```
 
@@ -13,7 +13,7 @@ Keep listening until a socket is connected.
 After this method is called, you can make a connection by pushing "Connect" button on logging app.
 Note that when this method is called, the bluetooth adapter should be discoverable by logging app to make a connection.
 
-```
+```java
 sendLocation(double lat, double lng, int level)
 ```
 
@@ -48,7 +48,7 @@ Do you use Daux.io? Send me a pull request or open an [issue](https://github.com
 
 ## Download
 
-Download this repository as a zip, and unpack. Copy the files to a web server that can run PHP 5.3 or greater. You can also run the documentation locally using Grunt.js, which is covered at the end of this readme.
+Download this repository , and run at Android device. Copy the files to a web server that can run PHP 5.3 or greater. You can also run the documentation locally using Grunt.js, which is covered at the end of this readme.
 
 ## Folders
 
