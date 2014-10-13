@@ -50,7 +50,7 @@ sendLocation(double lat, double lng, int level)
 
 Send estimated location with timestamp to the connected logging app.
 
-The coordinate of the location should be presented in WGS-84 (World Geodetic System) and it also should contain the information of floor level.
+The coordinate of the location should be presented in latitude and longitude. You have to refer and calculate latitude and longitude about the map which been provided. It also should contain the information of floor level.
 This method should be called whenever you have a new positioning result, while the bluetooth connection is maintained.
 
 ## Sample Code Review
