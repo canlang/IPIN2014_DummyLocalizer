@@ -50,7 +50,7 @@ sendLocation(double lat, double lng, int level)
 
 Send estimated location with timestamp to the connected logging app.
 
-The coordinate of the location should be presented in latitude and longitude. You have to refer and calculate latitude and longitude about the map which been provided. It also should contain the information of floor level.
+The coordinate of the location should be presented in latitude and longitude. You have to refer and calculate latitude and longitude of the map which been provided. It also should contain the information of floor level.
 This method should be called whenever you have a new positioning result, while the bluetooth connection is maintained.
 
 ## Sample Code Review
@@ -86,7 +86,7 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 
 * Output files are located in `/sdcard/ipin2014/` folder and two text files will be create and form like this: 
 * `<id>_keypoint.txt`: < id >, timestamp, keypoint numbering(eg, 0,1,2,3,...)
-* `<id>_keypoint.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, level of building
+* `<id>_keypoint.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, floor level
 
 ## Support
 
