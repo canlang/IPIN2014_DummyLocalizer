@@ -1,4 +1,4 @@
-Two apps are prepared for the IPIN2014 competitors: one is a logging app to collect the estimated location information from positioning systems, and the other one is a dummy app to send an empty location data to the logging app via bluetooth communications. Here, the **dummy app.**(dummy localizer) generates empty locations just for test and to be refered by competitors own positioning systems. The competitors positioning systems are supposed to send their estimated location information to the logging app in the same way as the dummy app does. The IPIN2014 common library have been prepared to support this.
+Two apps are prepared for the IPIN2014 competitors: one is a logging app to collect the estimated location information from positioning systems, and the other one is a dummy app to send an empty location data to the logging app via bluetooth communications. Here, the **dummy app**(dummy localizer) generates empty locations just for test and to be refered by competitors own positioning systems. The competitors positioning systems are supposed to send their estimated location information to the logging app in the same way as the dummy app does. The IPIN2014 common library have been prepared to support this.
 
 ## Major features
 
@@ -83,7 +83,7 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
     }
 };
 ```
-** comments: **
+**comments:**
 
 1. When `listen` button clicked, make bluetooth discoverable and listen
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
