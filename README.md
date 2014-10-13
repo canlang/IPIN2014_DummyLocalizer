@@ -37,13 +37,13 @@ Download this repository. Copy the apk file to an Android that can run 4.x or gr
 ## IPIN'14 competition common library
 ### LocationSender class
 
-```java
+```Java
 LocationSender(Context context)
 ```
 
 Class which has the bluetooth connectivity and pairing information.
 
-```java
+```Java
 LocationSender.listen()
 ```
 
@@ -52,7 +52,7 @@ Keep listening until a socket is connected.
 After this method is called, you can make a connection by pushing "Connect" button on logging app.
 Note that when this method is called, the bluetooth adapter should be discoverable by logging app to make a connection.
 
-```java
+```Java
 sendLocation(double lat, double lng, int level)
 ```
 
@@ -63,7 +63,7 @@ This method should be called whenever you have a new positioning result, while t
 
 ## Sample Code Review
 
-```java
+```Java
 private View.OnClickListener mBtnListener = new View.OnClickListener() {
 
     @Override
