@@ -56,29 +56,29 @@ This method should be called whenever you have a new positioning result, while t
 ## Sample Code Review
 
 ```java
-	private View.OnClickListener mBtnListener = new View.OnClickListener() {
+private View.OnClickListener mBtnListener = new View.OnClickListener() {
 
-		@Override
-		public void onClick(View v) {
-			switch ( v.getId() ) {
-			case R.id.btn_listen:
-				Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-				discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-				startActivity(discoverableIntent);
+    @Override
+    public void onClick(View v) {
+        switch ( v.getId() ) {
+        case R.id.btn_listen:
+            Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+            startActivity(discoverableIntent);
 
-				mSender.listen();
+            mSender.listen();
 
-				break;
-			case R.id.btn_sendLocation:
-				mSender.sendLocation(.0, .0, 0);
-				break;
-			}
-		}
-	};
+            break;
+        case R.id.btn_sendLocation:
+            mSender.sendLocation(.0, .0, 0);
+            break;
+        }
+    }
+};
 ```
 ** comments: **
 
-1. When `listen` button clicked, make bluetooh discoverable and listen
+1. When `listen` button clicked, make bluetooth discoverable and listen
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
 3. 2 process must be done after connect with logging application
 
@@ -90,4 +90,4 @@ This method should be called whenever you have a new positioning result, while t
 
 ## Support
 
-If you need help using **Dummy Localizer**, or have found a bug, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
+This work was contributed by Intelligent Service Integration Laboratory([ISILAB](http://isilab.kaist.ac.kr)) of KAIST. If you need help using Dummy Localizer, or have found a bug, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
