@@ -8,7 +8,7 @@ Two apps are prepared for the IPIN2014 competitors: one is a logging app to coll
 * Sending the output to the logging app
 
 ## The connections between the apps and a positioning system
-![workflow](https://cloud.githubusercontent.com/assets/420433/4607778/6fb7eb8c-525f-11e4-9b2f-5ad41e4068ac.png)
+![interaction2](https://cloud.githubusercontent.com/assets/420433/4608526/8206e612-5282-11e4-8a37-04112f015673.png)
 
 ## Demos
 
@@ -56,8 +56,8 @@ This method should be called whenever you have a new positioning result, while t
 ## Sample Code Review
 
 ```java
-private View.OnClickListener mBtnListener = new View.OnClickListener() {
-		
+	private View.OnClickListener mBtnListener = new View.OnClickListener() {
+
 		@Override
 		public void onClick(View v) {
 			switch ( v.getId() ) {
@@ -65,9 +65,9 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 				Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
 				discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
 				startActivity(discoverableIntent);
-				
+
 				mSender.listen();
-				
+
 				break;
 			case R.id.btn_sendLocation:
 				mSender.sendLocation(.0, .0, 0);
