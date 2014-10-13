@@ -1,13 +1,13 @@
-**Dummy Localizer ** is a dummy location generator just for test and customise your own positioning application. It helps you attach your positioning system with IPIN'14 logging application.
+Two apps are prepared for the IPIN2014 competitors: one is a logging app to collect the estimated location information from positioning systems, and the other one is a dummy app to send an empty location data to the logging app via bluetooth communications. Here, the **dummy app.**(dummy localizer) generates empty locations just for test and to be refered by competitors own positioning systems. The competitors positioning systems are supposed to send their estimated location information to the logging app in the same way as the dummy app does. The IPIN2014 common library have been prepared to support this.
 
-## Features
+## Major features
 
-* Contain IPIN'14 Competition Common Library : `libs/ipin2014_common.jar`
-* 1:1 Bluetooh Data Communication
-* Zero Coordinates Output Generation
-* Sending the Output to Logging Application
+* IPIN'14 competition common library : `libs/ipin2014_common.jar`
+* 1:1 Bluetooth data communication
+* Empty location output generation
+* Sending the output to the logging app
 
-## Logging Application Workflow
+## The connections between the apps and a positioning system
 ![workflow](https://cloud.githubusercontent.com/assets/420433/4607778/6fb7eb8c-525f-11e4-9b2f-5ad41e4068ac.png)
 
 ## Demos
@@ -26,8 +26,8 @@ This is a sample sequence of location logging:
 
 Download this repository. Copy the apk file to an Android that can run 4.x or greater.
 
-## IPIN'14 Competition Common Library
-### LocationSender Class
+## IPIN'14 competition common library
+### LocationSender class
 
 ```java
 LocationSender(Context context)
