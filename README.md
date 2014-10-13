@@ -86,7 +86,7 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 
 * Output files are located in `/sdcard/ipin2014/` folder and two text files will be create and form like this: 
 * `<id>_keypoint.txt`: < id >, timestamp, keypoint numbering(eg, 0,1,2,3,...)
-* `<id>_keypoint.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, level
+* `<id>_keypoint.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, level of building
 
 ## Support
 
