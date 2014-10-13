@@ -18,8 +18,8 @@ This is a sample sequence of location logging:
 2.	_(Dummy App)_ Click the “listen” button.
 3.	_(Logging App)_ Click the “scan” button to find the measurement device to be paired.
 4.	_(Logging App)_ Select the device and click the “connect” button to pair with the device. The mac address of the selected device is presented on the top of the app.
-5.	_(Logging App)_ After the pairing is made, a button represents current key point is activated. Initially, dummy list of key point is provided. 
-* _(Dummy App)_ When you click “send location” button, the measurement app should send an estimated location periodically. The most recent location log is presented on the top of the application. 
+5.	_(Logging App)_ After the pairing is made, a button represents current key point is activated. Initially, dummy list of key point is provided.
+* _(Dummy App)_ When you click “send location” button, dummy app send location (.0, .0, 0) to logging app. ** However, the implemented measurement app should send an estimated location periodically at highest frequency.** The most recent location log is presented on the top of the application.
 
 ![demo1](https://cloud.githubusercontent.com/assets/420433/4610527/94f69848-52b0-11e4-8a34-7ec521328518.png)
 
