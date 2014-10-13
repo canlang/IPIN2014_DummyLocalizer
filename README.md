@@ -14,12 +14,12 @@ Two apps are prepared for the IPIN2014 competitors: one is a logging app to coll
 
 This is a sample sequence of location logging:
 
-1.	(Logging App) Select a competitor ID from the list. Initially, dummy list of competitors is provided. 
-2.	(Dummy App) Click the “listen” button.
-3.	(Logging App) Click the “scan” button to find the measurement device to be paired.
-4.	(Logging App) Select the device and click the “connect” button to pair with the device. The mac address of the selected device is presented on the top of the app.
-5.	(Logging App) After the pairing is made, a button represents current key point is activated. Initially, dummy list of key point is provided. 
-* (Dummy App) When you click “send location” button, the measurement app should send an estimated location periodically. The most recent location log is presented on the top of the application. 
+1.	_(Logging App)_ Select a competitor ID from the list. Initially, dummy list of competitors is provided. 
+2.	_(Dummy App)_ Click the “listen” button.
+3.	_(Logging App)_ Click the “scan” button to find the measurement device to be paired.
+4.	_(Logging App)_ Select the device and click the “connect” button to pair with the device. The mac address of the selected device is presented on the top of the app.
+5.	_(Logging App)_ After the pairing is made, a button represents current key point is activated. Initially, dummy list of key point is provided. 
+* _(Dummy App)_ When you click “send location” button, the measurement app should send an estimated location periodically. The most recent location log is presented on the top of the application. 
 
 ![demo1](https://cloud.githubusercontent.com/assets/420433/4610527/94f69848-52b0-11e4-8a34-7ec521328518.png)
 
