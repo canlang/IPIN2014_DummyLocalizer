@@ -98,4 +98,4 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 
 ## Support
 
-This work was contributed by Intelligent Service Integration Laboratory([ISILAB](http://isilab.kaist.ac.kr)) of KAIST. If you need help using Dummy Localizer, or have found a bug, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
+This work was contributed by Intelligent Service Integration Laboratory([ISILAB](http://isilab.kaist.ac.kr)) at KAIST. If you need help using the Dummy Localizer, or have found bugs, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
