@@ -96,6 +96,52 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 	* `<id>_keypoint.txt`: < id >, timestamp, keypoint numbering(eg, 0,1,2,3,...)
 	* `<id>_location.txt`: < id >, timestamp(recv), timestampe(send), lat, lng, floor level
 
+## Guide for other platforms(updated Oct 20,2014)
+
+We suggest to use the [bluecove](http://bluecove.org/) library to connect other platforms like Windows.
+Here a sample code which tested at Windows 7 to connect competition logging app. As you can see, only uuid fix into following example.	(**uuid = "0000110100001000800000805F9B34FB"**)
+
+
+
+```java
+import ipin2014.competition.common.protocol.Location;
+
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import javax.bluetooth.*;
+import javax.microedition.io.Connector;
+import javax.microedition.io.StreamConnection;
+import javax.microedition.io.StreamConnectionNotifier;
+
+
+public class Test {
+
+	private static String uuid = "0000110100001000800000805F9B34FB";
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+    	LocalDevice localDevice = LocalDevice.getLocalDevice();
+    	localDevice.setDiscoverable(DiscoveryAgent.GIAC);
+
+    	String url = "btspp://localhost:" + uuid + ";name=BlueToothServer";
+    	StreamConnectionNotifier server = (StreamConnectionNotifier) Connector.open(url);
+
+    	StreamConnection connection = server.acceptAndOpen(); // Wait until client connects
+
+    	//=== At this point, two devices should be connected ===//
+    	ObjectOutputStream oos = new ObjectOutputStream(connection.openOutputStream());
+    	
+    	for(int i=0; i<100; i++){
+			long temp = System.currentTimeMillis();
+			while(temp + 1000 > System.currentTimeMillis());
+    	
+    		oos.writeObject(new Location(.1*i, .1*i, i, System.currentTimeMillis()));
+    	}
+
+    	connection.close();
+    }
+}
+```
+
 ## Support
 
 This work was contributed by Intelligent Service Integration Laboratory([ISILAB](http://isilab.kaist.ac.kr)) at KAIST. If you need help using the Dummy Localizer, or have found bugs, please create an issue on the <a href="https://github.com/canlang/IPIN2014_DummyLocalizer/issues" target="_blank">GitHub repo</a>
