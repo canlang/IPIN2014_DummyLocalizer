@@ -135,12 +135,18 @@ public class Test {
 			while(temp + 1000 > System.currentTimeMillis());
     	
     		oos.writeObject(new Location(.1*i, .1*i, i, System.currentTimeMillis()));
+            /* Create a new Location class(ipin'14 common library) and send the object
+            	input param: lng,lat, level, currentTime
+            */
     	}
 
     	connection.close();
     }
 }
 ```
+
+The object that is passed to the server side is *Location* which class is contained IPIN'14 common library.
+
 
 ## Support
 
