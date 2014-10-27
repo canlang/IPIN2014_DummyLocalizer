@@ -61,7 +61,7 @@ Send estimated location with timestamp to the connected logging app.
 The coordinate of the location should be presented in latitude and longitude. You have to refer and calculate latitude and longitude of the map which been provided. It also should contain the information of floor level.
 This method should be called whenever you have a new positioning result, while the bluetooth connection is maintained.
 
-## Sample Code Review
+## Sample code review
 
 ```Java
 private View.OnClickListener mBtnListener = new View.OnClickListener() {
@@ -90,7 +90,7 @@ private View.OnClickListener mBtnListener = new View.OnClickListener() {
 2. When `send` button clicked, send the location (lat, lng, level) to logging application
 3. 2nd process must be done after connect with logging application
 
-## Logging Application Output
+## Logging application output
 
 * Output files are located in `/sdcard/ipin2014/` folder and two text files will be create and the format like this:
 	* `<id>_keypoint.txt`: < id >, timestamp, keypoint numbering(eg, 0,1,2,3,...)
@@ -146,6 +146,16 @@ public class Test {
 ```
 
 The object that is passed to the server side is *Location* which class is contained IPIN'14 common library.
+
+
+## Map coordinates changed (**IMPORTANT** UPDATED Oct, 28, 2014)
+| Map point| lat (old)  | lng (old) |lat (**new**)  | lng (**new**) |
+| :------------ |:---------------:||:---------------:||:---------------:||:---------------:|
+| A2F A      | 35.167759|	129.134113|35.1677877|129.1340732|
+| A2F B      | 35.165378	|129.135841	|35.1653866|129.1358354|
+
+
+
 
 
 ## Support
