@@ -151,7 +151,7 @@ The object that is passed to the server side is *Location* which class is contai
 ## Map coordinates changed (**IMPORTANT** UPDATED Oct, 28, 2014)
 
 | Map point| lat (old)  | lng (old) |lat (**new**)  | lng (**new**) |
-| :------------ |:---------------:||:---------------:|:---------------:|:---------------:|
+| :------------ |:---------------:|:---------------:|:---------------:|:---------------:|
 | A2F A  | 35.167759|129.134113|35.1677877|129.1340732|
 | A2F B  | 35.165378|129.135841|35.1653866|129.1358354|
 
